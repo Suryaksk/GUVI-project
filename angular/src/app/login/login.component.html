@@ -1,0 +1,37 @@
+<div>
+    <div class="login ">
+        <div class="card mx-auto">
+            <div class="card-body ">
+                <div class="row">
+                    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                        <div class="guviimage">
+                            <img src="assets/image/GUVI.png" class="Guviimage">
+                        </div>
+                        <h4>Login</h4>
+                        <div class="form-group">
+                            <label for="Email">Email:</label>
+                            <input type="email" class="form-control" name="email" ngModel #emailid="ngModel" required
+                                email />
+                        </div>
+                        <p *ngIf="emailid.errors?.required && loginForm.submitted" class="text-danger">Email is
+                            required!
+                        </p>
+                        <p *ngIf="emailid.errors?.email" class="text-danger">invalid email </p>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" name="password" ngModel #pwd="ngModel"
+                                required />
+                        </div>
+                        <p *ngIf="pwd.errors?.required && loginForm.submitted" class="text-danger">Password is required
+                        </p><br>
+                        <div class="button">
+                            <button type="submit" class="btn btn-primary loginbtn" >Login</button>
+                            <p>Don't have a account?<button type="submit" class="btn btn-link signupbtn" [routerLink]="['/signup']" routerLinkActive="router-link-active">SignUp</button>here.</p>
+                      
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

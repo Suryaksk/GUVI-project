@@ -1,0 +1,23 @@
+.login{
+    background-color: rgba(178, 204, 188, 0.986);
+    padding-top: 6%;
+    padding-bottom: 10%;
+}
+
+.card{
+    width:26rem; 
+    height: 27rem;
+    border-radius: 15px;
+}
+.Guviimage{
+    height: 35%;
+    width: 35%;
+    border-radius: 10px;
+    
+}
+h4{
+    text-align: center;
+}
+.loginbtn{
+    width: 100%;
+}

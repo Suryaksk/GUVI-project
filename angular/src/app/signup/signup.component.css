@@ -1,0 +1,21 @@
+.signup{
+    background-color: rgba(178, 204, 188, 0.986);
+   padding-top: 1%;
+    padding-bottom: 2%;
+}
+.card{
+    width:30rem; 
+    height: 40rem;
+    border-radius: 15px;
+}
+.Guviimage{
+    height: 18%;
+    width: 32%;
+    border-radius: 14px;
+}
+h4{
+    text-align: center;
+}
+.signupbtn {
+    width: 100%
+}

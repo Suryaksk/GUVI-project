@@ -1,0 +1,43 @@
+<div class="profile">
+  <div class="card mx-auto">
+    <div class="card-body">
+      <form #profileForm="ngForm" (ngSubmit)="update(profileForm)">
+        <div class="guviimage">
+          <img src="assets/image/GUVI.png" class="Guviimage">
+        </div>
+        <h4>Additional Details</h4>
+        <div class="form-group ">
+          <label for="age" col-form-label>Age:</label>
+          <input type="age" class="form-control" name="age" ngModel #uage="ngModel" required>
+          <p *ngIf="uage.errors?.required && profileForm.submitted" class="text-danger">Enter age!</p>
+        </div>
+        <div class="form-group ">
+          <label class="msr-only" >Gender:</label>
+          <div class="option">
+            <select class="custom-select mr-sm-2" for="inlineFormCustomSelect" name="gender" ngModel #ugender="ngModel" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            <p *ngIf="ugender.errors?.required && profileForm.submitted" class="text-danger">Select gender!</p>
+          </div>
+        </div>
+        <div class="form-group ">
+          <label for="dob" class=" col-form-label" >DOB:(DD/MM/YYYY)</label>
+          <input type="dob" class="form-control" name="dob" ngModel #udob="ngModel" required>
+          </div>
+          <p *ngIf="udob.errors?.required && profileForm.submitted" class="text-danger">Enter DOB!</p>
+          <div class="form-group ">
+            <label for="tel" class=" col-form-label">Mobile:</label>
+            <input type="tel" class="form-control" name="tel" ngModel #telnum="ngModel" required>
+          </div><br>
+          <p *ngIf="telnum.errors?.required && profileForm.submitted" class="text-danger">Enter mobile number!</p>
+        <div class="button">
+          <button type="submit" class="btn btn-primary registerbtn">Save</button>
+          <p>click here to <button type="submit" class="btn btn-link loginbtn" routerLink="/login">Logout!!!</button> </p>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
